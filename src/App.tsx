@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, User, Code, Briefcase, ExternalLink, Calendar, Award, BookOpen, Terminal, Coffee, Heart, Send, MapPin, Phone } from 'lucide-react';
+// Inside your component
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -141,7 +142,7 @@ function App() {
         </div>
         
         <img
-          src="src/assets/image.jpg"
+          src="/images/image.jpg"
           alt="Abdullah Ayman"
                 className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-xl ring-4 ring-blue-400/30"
         />
@@ -273,14 +274,14 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
               {
                 title: 'E-commerce Platform',
                 description: 'The first full stack project for E-Commerce have a lot of features using PHP and MySql',
-                image: 'src/assets/proj1.png',
+                image: '/images/proj1.png',
                 tags: ['HTML', 'CSS','JS' , 'Mysql', 'PHP'],
                 link: 'https://github.com/Bodeayman/SimpleE-Com'
               },
               {
                 title: 'ReadSphere',
                 description: 'Interactive weather dashboard with data visualization using D3.js and real-time weather updates.',
-                image: 'src/assets/proj2.png',
+                image: '/images/proj2.png',
 
                 tags: ['ASP.NET', 'Sql Server', 'HTML', 'CSS'],
                 link: 'https://github.com/Bodeayman/ReadSphere-V2-'
@@ -288,7 +289,7 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
               {
                 title: 'Khair-ZC',
                 description: 'Collaborative task management application with real-time updates and team collaboration features.',
-                image: 'src/assets/proj3.png',
+                image: '/images/proj3.png',
 
                 tags: ['React', 'Flask', 'Mysql','Postman'],
                 link: 'https://github.com/0x3mr/Khair-ZC'
@@ -296,7 +297,7 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
               {
                 title: 'Bookly App',
                 description: 'Book app to show books related to programming using Google API',
-                image: 'src/assets/proj5.jpg',
+                image: '/images/proj5.jpg',
 
                 tags: [ 'Flutter', 'Google Api','Cubit', 'Dart' ],
                 link: 'https://github.com/Bodeayman/BookStore'
@@ -304,7 +305,7 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
               {
                 title: 'Notes App',
                 description: 'This project is a Notes app developed with Flutter and Hive for local storage, allowing users to create, edit, and delete ',
-                image: 'src/assets/proj4.jpg',
+                image: '/images/proj4.jpg',
 
                 tags: ['Cubit', 'Dart', 'Flutter','Hive'],
                 link: 'https://github.com/Bodeayman/NotesApp'
@@ -312,7 +313,7 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
               {
                 title: 'Google Classroom Clone',
                 description: 'A Clone Demonstartion for Google Classroom using Flutter as UI.',
-                image: 'src/assets/proj6.jpg',
+                image: '/images/proj6.jpg',
 
                 tags: ['Cubit', 'Dart', 'Flutter'],
                 link: 'https://github.com/Bodeayman/GC_Clone'
