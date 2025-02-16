@@ -89,7 +89,7 @@ function App() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolling ? 'bg-dark-900/95 backdrop-blur-sm shadow-lg shadow-dark-900/50' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
-            <span className="text-xl font-bold text-blue-400">JD</span>
+            <span className="text-xl font-bold text-blue-400">AA</span>
             <div className="hidden md:flex space-x-8">
               {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <a
@@ -108,45 +108,52 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <header id="home" className="relative bg-gradient-to-r from-dark-900 to-dark-950 pt-20">
-        <div className="absolute inset-0 bg-blue-600/10"></div>
-        <div className="container mx-auto px-6 py-32 relative">
-          <div className="max-w-3xl">
-            <div className="animate-fadeIn">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">John Doe</span>
-              </h1>
-              <p className="text-xl mb-8 leading-relaxed text-gray-300">
-                Full Stack Developer crafting exceptional digital experiences with cutting-edge technologies
-              </p>
-              <div className="flex flex-wrap gap-4 mb-12">
-                <a href="#projects" className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">
-                  View My Work
-                </a>
-                <a href="#contact" className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-full font-semibold hover:bg-blue-400/10 transition-colors">
-                  Contact Me
-                </a>
-              </div>
-              <div className="flex space-x-6">
-                <a href="https://github.com" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
-                  <Github size={24} className="text-blue-400" />
-                </a>
-                <a href="https://linkedin.com" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
-                  <Linkedin size={24} className="text-blue-400" />
-                </a>
-                <a href="mailto:john@example.com" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
-                  <Mail size={24} className="text-blue-400" />
-                </a>
-              </div>
-            </div>
+ <header id="home" className="relative bg-gradient-to-r from-dark-900 to-dark-950 pt-20">
+    <div className="absolute inset-0 bg-blue-600/10"></div>
+    <div className="container mx-auto px-6 py-32 relative">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
+        <div className="animate-fadeIn text-center md:text-left">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Abdullah Ayman</span>
+          </h1>
+          <p className="text-xl mb-8 leading-relaxed text-gray-300">
+            Full Stack Mobile Developer crafting exceptional digital experiences with cutting-edge technologies
+          </p>
+          <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
+            <a href="#projects" className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">
+              View My Work
+            </a>
+            <a href="#contact" className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-full font-semibold hover:bg-blue-400/10 transition-colors">
+              Contact Me
+            </a>
+          </div>
+          <div className="flex space-x-6 justify-center md:justify-start">
+            <a href="https://github.com/Bodeayman" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
+              <Github size={24} className="text-blue-400" />
+            </a>
+            <a href="https://www.linkedin.com/in/abdullah-ayman-96b37b2ba/" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
+              <Linkedin size={24} className="text-blue-400" />
+            </a>
+            <a href="abdulluhayman@gmail.com" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
+              <Mail size={24} className="text-blue-400" />
+            </a>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg className="w-full h-24 fill-current text-dark-900" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,0 C480,74 960,74 1440,0 L1440,74 L0,74 Z" />
-          </svg>
-        </div>
-      </header>
+        
+        <img
+          src="../dist/assets/image.jpg"
+          alt="Abdullah Ayman"
+                className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-xl ring-4 ring-blue-400/30"
+        />
+      </div>
+    </div>
+    <div className="absolute bottom-0 left-0 right-0">
+      <svg className="w-full h-24 fill-current text-dark-900" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 C480,74 960,74 1440,0 L1440,74 L0,74 Z" />
+      </svg>
+    </div>
+  </header>
+
 
       {/* Stats Section */}
       <section className="py-20 bg-dark-900">
@@ -175,9 +182,10 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-gray-300 leading-relaxed mb-6">
-                I'm a passionate full-stack developer with 5+ years of experience in building scalable web applications.
-                My journey in tech started with a curiosity about how things work on the internet, which led me to dive
-                deep into web development.
+              I'm Abdullah A full stack developer and a student in UST-ZC Computer Science and An ECPC Competitive and a competitve programmer in Codeforces,
+               I'm enthusiast about learning new technologies in the frontend and the backend and solving problems and creating friendly User Interfaces for your
+                business and your website, and i love creating and learning new things , 
+              I have a great proficiency in HTML,CSS,JS,PHP I'm dreaming about working in the faang company or make my own startup .
               </p>
               <p className="text-gray-300 leading-relaxed mb-8">
                 I specialize in React, Node.js, and modern web technologies. When I'm not coding,
@@ -333,7 +341,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-200">Location</h3>
-                      <p className="text-gray-400">San Francisco, CA</p>
+                      <p className="text-gray-400">Cairo , Egypt</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -342,7 +350,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-200">Email</h3>
-                      <a href="mailto:john@example.com" className="text-blue-400 hover:text-blue-300">john@example.com</a>
+                      <a href="mailto:john@example.com" className="text-blue-400 hover:text-blue-300">abdulluhayman@gmail.com</a>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -351,7 +359,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-200">Phone</h3>
-                      <p className="text-gray-400">+1 (555) 123-4567</p>
+                      <p className="text-gray-400">+201143512531 </p>
                     </div>
                   </div>
                 </div>
@@ -452,16 +460,16 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-100">John Doe</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-100">Abdullah Ayman</h3>
               <p className="text-gray-400 mb-4">Building digital experiences that make a difference.</p>
               <div className="flex space-x-4">
-                <a href="https://github.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="https://github.com/Bodeayman" className="text-gray-400 hover:text-blue-400 transition-colors">
                   <Github size={20} />
                 </a>
-                <a href="https://linkedin.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="https://www.linkedin.com/in/abdullah-ayman-96b37b2ba/" className="text-gray-400 hover:text-blue-400 transition-colors">
                   <Linkedin size={20} />
                 </a>
-                <a href="mailto:john@example.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="abdulluhayman@gmail.com" className="text-gray-400 hover:text-blue-400 transition-colors">
                   <Mail size={20} />
                 </a>
               </div>
@@ -479,12 +487,12 @@ function App() {
               <h3 className="text-xl font-semibold mb-4 text-gray-100">Get in Touch</h3>
               <p className="text-gray-400 mb-2">Feel free to reach out for collaborations or just a friendly hello</p>
               <a href="mailto:john@example.com" className="text-blue-400 hover:text-blue-300 transition-colors">
-                john@example.com
+                abdulluhayman@example.com
               </a>
             </div>
           </div>
           <div className="border-t border-dark-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2024 John Doe. All rights reserved.</p>
+            <p>©2025 Abdullah Ayman. All rights reserved.</p>
           </div>
         </div>
       </footer>
