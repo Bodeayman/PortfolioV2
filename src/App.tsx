@@ -60,27 +60,27 @@ function App() {
   };
 
   const stats = [
-    { icon: <Calendar size={20} />, label: 'Years Experience', value: '5+' },
-    { icon: <Terminal size={20} />, label: 'Projects Completed', value: '50+' },
+    { icon: <Calendar size={20} />, label: 'Years Experience', value: '1+' },
+    { icon: <Terminal size={20} />, label: 'Projects Completed', value: '10+' },
     { icon: <Coffee size={20} />, label: 'Coffee Consumed', value: '∞' },
     { icon: <Heart size={20} />, label: 'Happy Clients', value: '100+' },
   ];
 
   const experiences = [
     {
-      company: 'Tech Solutions Inc.',
-      role: 'Senior Full Stack Developer',
-      period: '2022 - Present',
-      description: 'Leading development of enterprise applications using React and Node.js.',
-      achievements: ['Improved system performance by 40%', 'Led team of 5 developers', 'Implemented CI/CD pipeline']
+      company: 'Personal Projects',
+      role: 'Flutter Developer',
+      period: '2024-Present',
+      description: 'Building Mobile Applications using Flutter and Dart',
+      achievements: ['Created some Applications', 'Implemented responsive design and optimized performance']
     },
     {
-      company: 'Digital Innovations Ltd.',
-      role: 'Full Stack Developer',
-      period: '2019 - 2022',
-      description: 'Developed and maintained multiple client projects.',
-      achievements: ['Reduced loading time by 60%', 'Implemented responsive design system', 'Mentored junior developers']
-    }
+      company: 'Personal Projects',
+      role: 'Web Developer',
+      period: '2024 - 2025',
+      description: 'Building personal web applications using Different technologies',
+      achievements: ['Created a portfolio website showcasing my projects', 'Built a simple e-commerce site']
+    },
   ];
 
   return (
@@ -182,16 +182,11 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-gray-300 leading-relaxed mb-6">
-              I'm Abdullah A full stack developer and a student in UST-ZC Computer Science and An ECPC Competitive and a competitve programmer in Codeforces,
-               I'm enthusiast about learning new technologies in the frontend and the backend and solving problems and creating friendly User Interfaces for your
-                business and your website, and i love creating and learning new things , 
-              I have a great proficiency in HTML,CSS,JS,PHP I'm dreaming about working in the faang company or make my own startup .
+              Hello, I'm Abdullah, a full-stack developer and a Computer Science student at UST-ZC. With hands-on experience in web development, I specialize in building responsive, user-friendly applications. My journey in coding has led me to master key technologies like HTML, CSS, JavaScript, and PHP.
+In addition to my web development skills, I have a strong focus on mobile app development with Flutter, where I’ve been able to create efficient and beautiful cross-platform apps. I'm passionate about exploring new tools and frameworks to enhance my skills in both frontend and backend development.
+When I'm not coding, I enjoy contributing to open-source projects, writing technical blogs, and mentoring fellow developers. My goal is to either work with a leading tech company or start my own venture in the tech industry.
               </p>
-              <p className="text-gray-300 leading-relaxed mb-8">
-                I specialize in React, Node.js, and modern web technologies. When I'm not coding,
-                you can find me contributing to open-source projects, writing technical blog posts,
-                or mentoring aspiring developers.
-              </p>
+
               <div className="flex flex-wrap gap-4">
                 <a href="#" className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300">
                   <BookOpen size={20} />
@@ -234,14 +229,18 @@ function App() {
               <h3 className="text-2xl font-bold mb-6">Technical Skills</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { name: 'React', level: 90 },
-                  { name: 'TypeScript', level: 85 },
-                  { name: 'Node.js', level: 88 },
-                  { name: 'Python', level: 75 },
-                  { name: 'AWS', level: 80 },
-                  { name: 'Docker', level: 78 },
-                  { name: 'GraphQL', level: 82 },
-                  { name: 'PostgreSQL', level: 85 }
+                  { name: 'Flutter', level: 90 },
+                  { name: 'Dart', level: 85 },
+                  { name: 'PHP', level: 88 },
+                  { name: 'Laravel', level: 75 },
+                  { name: 'HTML', level: 80 },
+                  { name: 'CSS', level: 78 },
+                  { name: 'JavaScript', level: 82 },
+                  { name: 'MySql', level: 90 },
+                  { name: 'Python', level: 85 },
+                  { name: 'C#', level: 90 },
+                  { name: 'C++', level: 85 },
+
                 ].map((skill) => (
                   <div key={skill.name} className="space-y-2">
                     <div className="flex justify-between items-center mb-1">
@@ -273,29 +272,51 @@ function App() {
             {[
               {
                 title: 'E-commerce Platform',
-                description: 'A full-featured e-commerce platform with real-time inventory management and analytics dashboard.',
-                image: 'https://images.unsplash.com/photo-1557821552-17105176375c?auto=format&fit=crop&w=800&q=80',
-                tags: ['React', 'Node.js', 'PostgreSQL'],
-                link: '#'
+                description: 'The first full stack project for E-Commerce have a lot of features using PHP and MySql',
+                image: '../dist/assets/proj1.png',
+                tags: ['HTML', 'CSS','JS' , 'Mysql', 'PHP'],
+                link: 'https://github.com/Bodeayman/SimpleE-Com'
               },
               {
-                title: 'Task Management App',
-                description: 'Collaborative task management application with real-time updates and team collaboration features.',
-                image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=800&q=80',
-                tags: ['React', 'Firebase', 'Material-UI'],
-                link: '#'
-              },
-              {
-                title: 'Weather Dashboard',
+                title: 'ReadSphere',
                 description: 'Interactive weather dashboard with data visualization using D3.js and real-time weather updates.',
-                image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=800&q=80',
-                tags: ['React', 'D3.js', 'Weather API'],
-                link: '#'
-              }
+                image: '../dist/assets/proj2.png',
+                tags: ['ASP.NET', 'Sql Server', 'HTML', 'CSS'],
+                link: 'https://github.com/Bodeayman/ReadSphere-V2-'
+              },
+              {
+                title: 'Khair-ZC',
+                description: 'Collaborative task management application with real-time updates and team collaboration features.',
+                image: '../dist/assets/proj3.png',
+                tags: ['React', 'Flask', 'Mysql','Postman'],
+                link: 'https://github.com/0x3mr/Khair-ZC'
+              },
+              {
+                title: 'Bookly App',
+                description: 'Book app to show books related to programming using Google API',
+                image: '../dist/assets/proj5.jpg',
+                tags: [ 'Flutter', 'Google Api','Cubit', 'Dart' ],
+                link: 'https://github.com/Bodeayman/BookStore'
+              },
+              {
+                title: 'Notes App',
+                description: 'This project is a Notes app developed with Flutter and Hive for local storage, allowing users to create, edit, and delete ',
+                image: '../dist/assets/proj6.jpg',
+                tags: ['Cubit', 'Dart', 'Flutter','Hive'],
+                link: 'https://github.com/Bodeayman/NotesApp'
+              },
+              {
+                title: 'Google Classroom Clone',
+                description: 'A Clone Demonstartion for Google Classroom using Flutter as UI.',
+                image: '../dist/assets/proj4.jpg',
+                tags: ['Cubit', 'Dart', 'Flutter'],
+                link: 'https://github.com/Bodeayman/GC_Clone'
+              },
+
             ].map((project) => (
               <div key={project.title} className="group bg-dark-800 rounded-xl overflow-hidden shadow-lg shadow-dark-900/50 hover:shadow-xl hover:shadow-dark-900/50 transition-all">
                 <div className="relative">
-                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                  <img src={project.image} alt={project.title} className="w-full h-48 object-contain" />
                   <div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-90 transition-opacity flex items-center justify-center">
                     <a href={project.link} className="text-white flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
                       <span>View Project</span>
