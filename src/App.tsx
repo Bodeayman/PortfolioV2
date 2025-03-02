@@ -41,7 +41,7 @@ function App() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
@@ -96,9 +96,8 @@ function App() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className={`transition-colors hover:text-blue-400 ${
-                    activeSection === item.toLowerCase() ? 'text-blue-400 font-semibold' : 'text-gray-300'
-                  }`}
+                  className={`transition-colors hover:text-blue-400 ${activeSection === item.toLowerCase() ? 'text-blue-400 font-semibold' : 'text-gray-300'
+                    }`}
                 >
                   {item}
                 </a>
@@ -109,51 +108,52 @@ function App() {
       </nav>
 
       {/* Hero Section */}
- <header id="home" className="relative bg-gradient-to-r from-dark-900 to-dark-950 pt-20">
-    <div className="absolute inset-0 bg-blue-600/10"></div>
-    <div className="container mx-auto px-6 py-32 relative">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
-        <div className="animate-fadeIn text-center md:text-left">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Abdullah Ayman</span>
-          </h1>
-          <p className="text-xl mb-8 leading-relaxed text-gray-300">
-            Full Stack Mobile Developer crafting exceptional digital experiences with cutting-edge technologies
-          </p>
-          <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
-            <a href="#projects" className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">
-              View My Work
-            </a>
-            <a href="#contact" className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-full font-semibold hover:bg-blue-400/10 transition-colors">
-              Contact Me
-            </a>
-          </div>
-          <div className="flex space-x-6 justify-center md:justify-start">
-            <a href="https://github.com/Bodeayman" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
-              <Github size={24} className="text-blue-400" />
-            </a>
-            <a href="https://www.linkedin.com/in/abdullah-ayman-96b37b2ba/" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
-              <Linkedin size={24} className="text-blue-400" />
-            </a>
-            <a href="abdulluhayman@gmail.com" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
-              <Mail size={24} className="text-blue-400" />
-            </a>
+      <header id="home" className="relative bg-gradient-to-r from-dark-900 to-dark-950 pt-20">
+        <div className="absolute inset-0 bg-blue-600/10"></div>
+        <div className="container mx-auto px-6 py-32 relative">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
+            <div className="animate-fadeIn text-center md:text-left">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Abdullah Ayman</span>
+              </h1>
+              <p className="text-xl mb-8 leading-relaxed text-gray-300">
+                Full Stack Mobile Developer crafting exceptional digital experiences with cutting-edge technologies
+              </p>
+              <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
+                <a href="#projects" className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">
+                  View My Work
+                </a>
+                <a href="/resume.pdf" download="Abdullah_Ayman_Resume.pdf" className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-full font-semibold hover:bg-blue-400/10 transition-colors">
+                  Download Resume
+                </a>
+
+              </div>
+              <div className="flex space-x-6 justify-center md:justify-start">
+                <a href="https://github.com/Bodeayman" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
+                  <Github size={24} className="text-blue-400" />
+                </a>
+                <a href="https://www.linkedin.com/in/abdullah-ayman-96b37b2ba/" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
+                  <Linkedin size={24} className="text-blue-400" />
+                </a>
+                <a href="abdulluhayman@gmail.com" className="p-3 bg-dark-800 rounded-full hover:bg-dark-700 transition-colors">
+                  <Mail size={24} className="text-blue-400" />
+                </a>
+              </div>
+            </div>
+
+            <img
+              src="/images/image.jpg"
+              alt="Abdullah Ayman"
+              className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-xl ring-4 ring-blue-400/30"
+            />
           </div>
         </div>
-        
-        <img
-          src="/images/image.jpg"
-          alt="Abdullah Ayman"
-                className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-xl ring-4 ring-blue-400/30"
-        />
-      </div>
-    </div>
-    <div className="absolute bottom-0 left-0 right-0">
-      <svg className="w-full h-24 fill-current text-dark-900" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,0 C480,74 960,74 1440,0 L1440,74 L0,74 Z" />
-      </svg>
-    </div>
-  </header>
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg className="w-full h-24 fill-current text-dark-900" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 C480,74 960,74 1440,0 L1440,74 L0,74 Z" />
+          </svg>
+        </div>
+      </header>
 
 
       {/* Stats Section */}
@@ -183,9 +183,9 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-gray-300 leading-relaxed mb-6">
-              Hello, I'm Abdullah, a full-stack developer and a Computer Science student at UST-ZC. With hands-on experience in web development, I specialize in building responsive, user-friendly applications. My journey in coding has led me to master key technologies like HTML, CSS, JavaScript, and PHP.
-In addition to my web development skills, I have a strong focus on mobile app development with Flutter, where I’ve been able to create efficient and beautiful cross-platform apps. I'm passionate about exploring new tools and frameworks to enhance my skills in both frontend and backend development.
-When I'm not coding, I enjoy contributing to open-source projects, writing technical blogs, and mentoring fellow developers. My goal is to either work with a leading tech company or start my own venture in the tech industry.
+                Hello, I'm Abdullah, a full-stack developer and a Computer Science student at UST-ZC. With hands-on experience in web development, I specialize in building responsive, user-friendly applications. My journey in coding has led me to master key technologies like HTML, CSS, JavaScript, and PHP.
+                In addition to my web development skills, I have a strong focus on mobile app development with Flutter, where I’ve been able to create efficient and beautiful cross-platform apps. I'm passionate about exploring new tools and frameworks to enhance my skills in both frontend and backend development.
+                When I'm not coding, I enjoy contributing to open-source projects, writing technical blogs, and mentoring fellow developers. My goal is to either work with a leading tech company or start my own venture in the tech industry.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -231,9 +231,12 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   { name: 'Flutter', level: 90 },
+                  { name: 'Node.js', level: 80 },
+                  { name: 'Express.js', level: 80 },
+                  { name: 'Mongodb', level: 80 },
                   { name: 'Dart', level: 85 },
                   { name: 'PHP', level: 88 },
-                  { name: 'Laravel', level: 75 },
+                  { name: 'Laravel', level: 70 },
                   { name: 'HTML', level: 80 },
                   { name: 'CSS', level: 78 },
                   { name: 'JavaScript', level: 82 },
@@ -275,12 +278,12 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
                 title: 'E-commerce Platform',
                 description: 'The first full stack project for E-Commerce have a lot of features using PHP and MySql',
                 image: '/images/proj1.png',
-                tags: ['HTML', 'CSS','JS' , 'Mysql', 'PHP'],
+                tags: ['HTML', 'CSS', 'JS', 'Mysql', 'PHP'],
                 link: 'https://github.com/Bodeayman/SimpleE-Com'
               },
               {
                 title: 'ReadSphere',
-                description: 'Interactive weather dashboard with data visualization using D3.js and real-time weather updates.',
+                description: 'Personal Library with admin dashboard that users can save books',
                 image: '/images/proj2.png',
 
                 tags: ['ASP.NET', 'Sql Server', 'HTML', 'CSS'],
@@ -288,10 +291,10 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
               },
               {
                 title: 'Khair-ZC',
-                description: 'Collaborative task management application with real-time updates and team collaboration features.',
+                description: 'A website for our club in ZC , You can Join any charity or organize it!',
                 image: '/images/proj3.png',
 
-                tags: ['React', 'Flask', 'Mysql','Postman'],
+                tags: ['React', 'Flask', 'Mysql', 'Postman'],
                 link: 'https://github.com/0x3mr/Khair-ZC'
               },
               {
@@ -299,7 +302,7 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
                 description: 'Book app to show books related to programming using Google API',
                 image: '/images/proj5.jpg',
 
-                tags: [ 'Flutter', 'Google Api','Cubit', 'Dart' ],
+                tags: ['Flutter', 'Google Api', 'Cubit', 'Dart'],
                 link: 'https://github.com/Bodeayman/BookStore'
               },
               {
@@ -307,7 +310,7 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
                 description: 'This project is a Notes app developed with Flutter and Hive for local storage, allowing users to create, edit, and delete ',
                 image: '/images/proj4.jpg',
 
-                tags: ['Cubit', 'Dart', 'Flutter','Hive'],
+                tags: ['Cubit', 'Dart', 'Flutter', 'Hive'],
                 link: 'https://github.com/Bodeayman/NotesApp'
               },
               {
@@ -358,7 +361,7 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
             <div>
               <div className="space-y-6">
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  I'm always interested in hearing about new projects and opportunities. 
+                  I'm always interested in hearing about new projects and opportunities.
                   Whether you have a question or just want to say hi, feel free to reach out!
                 </p>
                 <div className="space-y-4">
@@ -457,9 +460,8 @@ When I'm not coding, I enjoy contributing to open-source projects, writing techn
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-3 px-6 rounded-lg bg-blue-600 text-white font-semibold flex items-center justify-center space-x-2 hover:bg-blue-700 transition-colors ${
-                    isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
-                  }`}
+                  className={`w-full py-3 px-6 rounded-lg bg-blue-600 text-white font-semibold flex items-center justify-center space-x-2 hover:bg-blue-700 transition-colors ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
+                    }`}
                 >
                   {isSubmitting ? (
                     'Sending...'
