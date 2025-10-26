@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, User, Code, Briefcase, ExternalLink, Calendar, Award, BookOpen, Terminal, Coffee, Heart, Send, MapPin, Phone, Star, Quote, ChevronRight, Sparkles, TrendingUp } from 'lucide-react';
+import { Github, Linkedin, Mail, User, Code, Briefcase, ExternalLink, Calendar, Award, BookOpen, Terminal, Coffee, Heart, Send, MapPin, Phone, Star, Quote, ChevronRight, Sparkles, TrendingUp, Lightbulb, Code2 } from 'lucide-react';
+import SkillsSection from './components/Skills';
 // Inside your component
 
 function App() {
@@ -67,7 +68,7 @@ function App() {
   };
 
   const stats = [
-    { icon: <Calendar size={20} />, label: 'Years Experience', value: '1+' },
+    { icon: <Calendar size={20} />, label: 'Years Experience', value: '2+' },
     { icon: <Terminal size={20} />, label: 'Projects Completed', value: '10+' },
     { icon: <Coffee size={20} />, label: 'Coffee Consumed', value: '∞' },
     { icon: <Heart size={20} />, label: 'Happy Clients', value: '100+' },
@@ -100,8 +101,15 @@ function App() {
   const experiences = [
     {
       company: 'Personal Projects',
+      role: 'Backend Developer',
+      period: '2024-2025',
+      description: 'Building Backend Projects and APIs using .NET MVC and Web API',
+      achievements: ['Created some Applications', 'Implemented Business logic and optimized performance']
+    },
+    {
+      company: 'Personal Projects',
       role: 'Flutter Developer',
-      period: '2024-Present',
+      period: '2024-2025',
       description: 'Building Mobile Applications using Flutter and Dart',
       achievements: ['Created some Applications', 'Implemented responsive design and optimized performance']
     },
@@ -131,12 +139,12 @@ function App() {
             <div className="flex items-center space-x-3 group cursor-pointer">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-lg blur-md group-hover:blur-lg transition-all"></div>
-                <span className="relative text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent px-4 py-2 border border-amber-500/30 rounded-lg backdrop-blur-sm">AA</span>
+                <a className="relative text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent px-4 py-2 border border-amber-500/30 rounded-lg backdrop-blur-sm" href="#">AA</a>
               </div>
-              <Sparkles className="text-amber-400 animate-pulse" size={20} />
+              <Sparkles className="text-black animate-pulse " size={20} />
             </div>
             <div className="hidden md:flex items-center space-x-1 bg-zinc-900/50 backdrop-blur-sm rounded-full px-2 py-2 border border-amber-500/10">
-              {['Home', 'About', 'Skills', 'Projects', 'Testimonials', 'Contact'].map((item) => (
+              {['Home', 'About', 'Skills', 'Projects', 'Achievements', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -148,7 +156,7 @@ function App() {
                   )}
                   <span className="relative font-medium">{item}</span>
                   {activeSection === item.toLowerCase() && (
-                    <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-amber-400 rounded-full"></span>
+                    <span className=""></span>
                   )}
                 </a>
               ))}
@@ -169,7 +177,7 @@ function App() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-3xl"></div>
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,black_100%)]"></div>
-        <div className="container mx-auto px-6 py-32 relative">
+        <div className="container mx-auto px-2 py-32 relative">
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
             <div className="animate-fadeIn text-center md:text-left">
               <div className="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-4 py-2 mb-6">
@@ -180,7 +188,7 @@ function App() {
                 Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600">Abdullah Ayman</span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 leading-relaxed text-gray-300">
-                Elite Full Stack Mobile Developer crafting <span className="text-amber-400 font-semibold">exceptional</span> digital experiences with cutting-edge technologies
+                Elite Full Stack Developer crafting <span className="text-amber-400 font-semibold">exceptional</span> digital experiences with cutting-edge technologies
               </p>
               <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
                 <a href="#projects" className="relative group bg-gradient-to-r from-amber-400 to-yellow-500 text-black px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 overflow-hidden">
@@ -209,11 +217,14 @@ function App() {
 
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 rounded-full blur-lg group-hover:blur-xl transition-all opacity-75"></div>
-              <img
-                src="/images/image.jpg"
-                alt="Abdullah Ayman"
-                className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl ring-4 ring-amber-500/50"
-              />
+              <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl ring-4 ring-amber-500/50">
+                <img
+                  src="/images/image.jpg"
+                  alt="Abdullah Ayman"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+
             </div>
           </div>
         </div>
@@ -223,7 +234,6 @@ function App() {
           </svg>
         </div>
       </header>
-
 
       {/* Stats Section */}
       <section className="py-20 bg-zinc-950 relative">
@@ -257,11 +267,12 @@ function App() {
             <h2 className="text-5xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">About Me</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
+            {/* About Section */}
             <div>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Hello, I'm Abdullah, a full-stack developer and a Computer Science student at UST-ZC. With hands-on experience in web development, I specialize in building responsive, user-friendly applications. My journey in coding has led me to master key technologies like HTML, CSS, JavaScript, and PHP.
-                In addition to my web development skills, I have a strong focus on mobile app development with Flutter, where I’ve been able to create efficient and beautiful cross-platform apps. I'm passionate about exploring new tools and frameworks to enhance my skills in both frontend and backend development.
-                When I'm not coding, I enjoy contributing to open-source projects, writing technical blogs, and mentoring fellow developers. My goal is to either work with a leading tech company or start my own venture in the tech industry.
+                Hello, I'm Abdullah — a Computer Science student at Zewail City and a passionate full-stack developer with over two years of experience in software development, including one year in mobile app development. I specialize in building scalable, maintainable systems using technologies like Flutter, Express.js, and .NET.
+                My journey in coding has allowed me to design and implement cross-platform mobile apps and efficient web backends with a strong focus on clean architecture and performance. I enjoy blending functionality with user-friendly design, whether through Flutter’s UI capabilities or structured backend systems.
+                Beyond development, I’m deeply interested in open-source contributions, writing technical content, and collaborating with other developers. My goal is to keep growing technically while contributing to meaningful, real-world projects that make a positive impact.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -275,12 +286,21 @@ function App() {
                 </a>
               </div>
             </div>
+
+            {/* Experience Section */}
             <div className="space-y-6">
               <h3 className="text-2xl font-bold mb-6">Professional Experience</h3>
               {experiences.map((exp, index) => (
-                <div key={index} className="border-l-4 border-amber-500 pl-6 py-3 hover:border-amber-400 transition-all group">
-                  <h4 className="text-xl font-semibold text-gray-100 group-hover:text-amber-400 transition-colors">{exp.role}</h4>
-                  <p className="text-amber-400 mb-2 font-medium">{exp.company} | {exp.period}</p>
+                <div
+                  key={index}
+                  className="border-l-4 border-amber-500 pl-6 py-3 hover:border-amber-400 transition-all group"
+                >
+                  <h4 className="text-xl font-semibold text-gray-100 group-hover:text-amber-400 transition-colors">
+                    {exp.role}
+                  </h4>
+                  <p className="text-amber-400 mb-2 font-medium">
+                    {exp.company} | {exp.period}
+                  </p>
                   <p className="text-gray-300 mb-3">{exp.description}</p>
                   <ul className="list-disc list-inside text-gray-300">
                     {exp.achievements.map((achievement, i) => (
@@ -291,6 +311,7 @@ function App() {
               ))}
             </div>
           </div>
+
         </div>
       </section>
 
@@ -305,41 +326,7 @@ function App() {
             <h2 className="text-5xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">Skills & Expertise</h2>
           </div>
           <div className="grid gap-8">
-            <div className="bg-zinc-900 border border-amber-500/20 p-8 rounded-2xl shadow-2xl hover:border-amber-500/40 transition-all">
-              <h3 className="text-3xl font-bold mb-8 text-amber-400">Technical Skills</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {[
-                  { name: 'Flutter', level: 90 },
-                  { name: 'Node.js', level: 80 },
-                  { name: 'Express.js', level: 80 },
-                  { name: 'Mongodb', level: 80 },
-                  { name: 'Dart', level: 85 },
-                  { name: 'PHP', level: 88 },
-                  { name: 'Laravel', level: 70 },
-                  { name: 'HTML', level: 80 },
-                  { name: 'CSS', level: 78 },
-                  { name: 'JavaScript', level: 82 },
-                  { name: 'MySql', level: 90 },
-                  { name: 'Python', level: 85 },
-                  { name: 'C#', level: 90 },
-                  { name: 'C++', level: 85 },
-
-                ].map((skill) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="font-medium text-gray-200">{skill.name}</span>
-                      <span className="text-sm text-gray-400">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full transition-all duration-500 shadow-lg shadow-amber-500/50"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <SkillsSection></SkillsSection>
           </div>
         </div>
       </section>
@@ -357,18 +344,18 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'E-commerce Platform',
-                description: 'The first full stack project for E-Commerce have a lot of features using PHP and MySql',
+                title: 'Multi-Vendor E-commerce Platform',
+                description: 'A platform allows multiple users to showcase their products and purchase it using PHP and MySQL',
                 image: '/images/proj1.png',
                 tags: ['HTML', 'CSS', 'JS', 'Mysql', 'PHP'],
                 link: 'https://github.com/Bodeayman/SimpleE-Com'
               },
               {
                 title: 'ReadSphere',
-                description: 'Personal Library with admin dashboard that users can save books',
+                description: 'Personal Library with admin dashboard that users can save books and Join Clubs',
                 image: '/images/proj2.png',
 
-                tags: ['ASP.NET', 'Sql Server', 'HTML', 'CSS'],
+                tags: ['ASP.NET MVC', 'Sql Server', 'HTML', 'CSS', 'EF Core'],
                 link: 'https://github.com/Bodeayman/ReadSphere-V2-'
               },
               {
@@ -376,7 +363,7 @@ function App() {
                 description: 'A website for our club in ZC , You can Join any charity or organize it!',
                 image: '/images/proj3.png',
 
-                tags: ['React', 'Flask', 'Mysql', 'Postman'],
+                tags: ['React', 'Flask', 'Mysql', 'Postman', 'SQLAlchemy'],
                 link: 'https://github.com/0x3mr/Khair-ZC'
               },
               {
@@ -388,20 +375,20 @@ function App() {
                 link: 'https://github.com/Bodeayman/BookStore'
               },
               {
-                title: 'Notes App',
-                description: 'This project is a Notes app developed with Flutter and Hive for local storage, allowing users to create, edit, and delete ',
-                image: '/images/proj4.jpg',
+                title: 'Tasky ',
+                description: 'Advanced To-Do app with the Priority and Progress Management and QR Reader ',
+                image: '/images/proj8.jpg',
 
-                tags: ['Cubit', 'Dart', 'Flutter', 'Hive'],
-                link: 'https://github.com/Bodeayman/NotesApp'
+                tags: ['Cubit', 'Dart', 'Flutter', 'Hive', 'API Integration'],
+                link: 'https://github.com/Bodeayman/Tasky'
               },
               {
-                title: 'Google Classroom Clone',
-                description: 'A Clone Demonstartion for Google Classroom using Flutter as UI.',
-                image: '/images/proj6.jpg',
+                title: 'JimTan Store',
+                description: 'An Ecommerce App that showcases the products and Purchase it with real payment gateway',
+                image: '/images/proj7.jpg',
 
-                tags: ['Cubit', 'Dart', 'Flutter'],
-                link: 'https://github.com/Bodeayman/GC_Clone'
+                tags: ['Cubit', 'Dart', 'Flutter', 'Supabase', 'Paymob', 'Hive'],
+                link: 'https://github.com/Bodeayman/EcomFlutter'
               },
 
             ].map((project) => (
@@ -433,44 +420,63 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-zinc-950 relative overflow-hidden">
+      <section id="achievements" className="py-20 bg-zinc-950 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-3xl"></div>
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-4 py-2 mb-6">
               <TrendingUp className="text-amber-400" size={16} />
-              <span className="text-amber-400 text-sm font-medium">Client Success Stories</span>
+              <span className="text-amber-400 text-sm font-medium">Career Highlights</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent mb-4">What Clients Say</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">Trusted by industry leaders and innovative startups worldwide</p>
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent mb-4">
+              My Achievements & Expertise
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              A snapshot of my journey, technical strengths, and professional milestones.
+            </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-zinc-900 border border-amber-500/20 p-8 rounded-2xl hover:border-amber-500/50 transition-all group relative">
-                <div className="absolute top-6 right-6 text-amber-400/20 group-hover:text-amber-400/40 transition-colors">
-                  <Quote size={48} />
-                </div>
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full blur-md opacity-50"></div>
-                    <img src={testimonial.image} alt={testimonial.name} className="relative w-16 h-16 rounded-full object-cover ring-2 ring-amber-500/50" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-gray-100">{testimonial.name}</h4>
-                    <p className="text-amber-400 text-sm font-medium">{testimonial.role}</p>
-                  </div>
-                </div>
-                <div className="flex space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-gray-300 leading-relaxed relative z-10">{testimonial.content}</p>
+            {/* Card 1 - Technical Expertise */}
+            <div className="bg-zinc-900 border border-amber-500/20 p-8 rounded-2xl hover:border-amber-500/50 transition-all relative group">
+              <div className="absolute top-6 right-6 text-amber-400/20 group-hover:text-amber-400/40 transition-colors">
+                <Code2 size={48} />
               </div>
-            ))}
+              <h3 className="text-xl font-bold text-gray-100 mb-3">Full-Stack Development</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Building scalable, maintainable web apps using modern technologies like
+                <span className="text-amber-400"> ASP.NET Core</span>, <span className="text-amber-400"> Node.js</span>, and
+                <span className="text-amber-400"> Flutter</span>.
+              </p>
+            </div>
+
+            {/* Card 2 - Project Impact */}
+            <div className="bg-zinc-900 border border-amber-500/20 p-8 rounded-2xl hover:border-amber-500/50 transition-all relative group">
+              <div className="absolute top-6 right-6 text-amber-400/20 group-hover:text-amber-400/40 transition-colors">
+                <Award size={48} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-100 mb-3">Real-World Projects</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Created production-ready apps including <span className="text-amber-400">ReadSphere</span>, a book tracking platform, and
+                <span className="text-amber-400"> JimTan Store</span>, a E-commerce app .
+              </p>
+            </div>
+
+            {/* Card 3 - Learning & Growth */}
+            <div className="bg-zinc-900 border border-amber-500/20 p-8 rounded-2xl hover:border-amber-500/50 transition-all relative group">
+              <div className="absolute top-6 right-6 text-amber-400/20 group-hover:text-amber-400/40 transition-colors">
+                <Lightbulb size={48} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-100 mb-3">Continuous Learning</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Passionate about mastering <span className="text-amber-400">software architecture</span>,
+                <span className="text-amber-400"> system design</span>, and new technologies to build better digital products.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-black relative overflow-hidden">
